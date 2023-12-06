@@ -30,6 +30,13 @@ node_moduels folder is not included in the package.
 
 PS C:\dev\LastpassAutomation> npx playwright test
 
+Tests use a dummy user manually created:
+  // Login Credentials
+  const LOGIN = {
+    USER_NAME: 'Mitacs.Test@gmail.com',
+    PASSWORD: 'Mitacs.Test@123'
+  };
+
 
 ## Configuration
 
