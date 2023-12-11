@@ -5,7 +5,8 @@ Features tested:
 Create Account;
 Login;
 Logout;
-Handle Password Item: Add, Edit and Delete
+Handle Password Item: Add, Edit and Delete;
+Generate Password
 
 ## Installation
 
@@ -23,12 +24,17 @@ tests\
   ->TestCreateAccount.spec.js
   ->TestLoginLogout.spec.js
   ->TestPasswordItem.spec.js
+  ->TestGeneratePassword.spec.js
 
 node_moduels folder is not included in the package.
 
 ## Usage
+To test Password Generator
+PS C:\dev\LastpassAutomation> npx playwright test tests/TestGeneratePassword.spec.js
 
+PS C:\dev\LastpassAutomation> npx playwright test 
 PS C:\dev\LastpassAutomation> npx playwright test
+
 
 Tests use a dummy user manually created:
   // Login Credentials
@@ -52,4 +58,12 @@ Noticed if run with multiple workers, more failures might due to concurrecy issu
 -> After added the first Password Item, the Add button "+" does not show up in the page during automation. Cannot test add or edit function with multiple items. 
 -> Because missing "+" Add button, each test has to delete the added item. So next test can Add item by clicking "Add items one-by-one" from the welcome page   
 -> If you see a lot of failures in TestPsswordItem, probabbly because there're some items for the user, have to manually remove all the items and retry the test. 
+
+## Functions tested for password generator feature
+-> Create a password easy to say
+-> Create a password easy to read
+-> Create a passwor with all characters
+-> Password Copy
+-> Password refresh
+-> Password range limitaion
 
